@@ -18,7 +18,7 @@ public abstract class Animal {
     private Color color;
     private float weight;
     private int age;
-    private final boolean isEdible;
+    private boolean isEdible;
     
     //Constructor
     public Animal(float width, float height, Color color, float weight, int age) {
@@ -28,6 +28,14 @@ public abstract class Animal {
        this.weight = weight;
        this.age = age;
        this.isEdible = false;
+    }
+
+    public boolean isIsEdible() {
+        return isEdible;
+    }
+
+    public void setIsEdible(boolean isEdible) {
+        this.isEdible = isEdible;
     }
     
     public Animal(float weight, int age) {

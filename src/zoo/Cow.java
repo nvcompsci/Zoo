@@ -12,6 +12,11 @@ package zoo;
 public class Cow extends Animal implements Edible {
     private final int calories = 500;
     
+    public Cow() {
+        super();
+        super.setIsEdible(true);
+    }
+    
     @Override
     public void speak() {
         System.out.println("moo");

@@ -31,6 +31,7 @@ public class Zoo {
         //bessy.speak();
         spot = new Dog();
         //spot.speak();
+        zack = new Zookeeper();
         
         animals = new ArrayList<>();
         for (int i = 0; i < 30; i++) {
@@ -58,7 +59,8 @@ public class Zoo {
             cannot be run.
             */
             a.speak();
-            zack.eat( (Edible) a);
+            if (a.isIsEdible()) 
+                zack.eat( (Edible) a);
         }
        
     }

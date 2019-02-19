@@ -14,6 +14,11 @@ import java.awt.Color;
 public class Pig extends Animal implements Edible{
     private final int calories = 300;    
     
+    public Pig() {
+        super();
+        super.setIsEdible(true);
+    }
+    
     @Override
     public void speak() {
         System.out.println("oink");

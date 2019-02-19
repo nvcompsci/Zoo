@@ -11,6 +11,11 @@ package zoo;
  */
 public class Coconut implements Edible {
     private final int calories = 150;
+    private boolean isEdible;
+        
+    public Coconut() {
+        isEdible = true;
+    }
     
     @Override
     public void foodIsCalled() {

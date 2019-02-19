@@ -12,6 +12,11 @@ package zoo;
 public class Sheep extends Animal implements Edible {
     private final int calories = 200;
     
+    public Sheep() {
+        super();
+        super.setIsEdible(true);
+    }
+    
     @Override
     public void speak() {
         System.out.println("baa"); //To change body of generated methods, choose Tools | Templates.
