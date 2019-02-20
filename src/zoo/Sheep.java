@@ -19,7 +19,7 @@ public class Sheep extends Animal implements Edible {
     
     @Override
     public void speak() {
-        System.out.println("baa"); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("baa");
     }
     
     @Override

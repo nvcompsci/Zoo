@@ -19,6 +19,7 @@ public abstract class Animal {
     private float weight;
     private int age;
     private boolean isEdible;
+    private static final String KINGDOM = "Animal";
     
     //Constructor
     public Animal(float width, float height, Color color, float weight, int age) {
@@ -44,7 +45,7 @@ public abstract class Animal {
 
     //no-args
     public Animal() {
-        this((float) 3.0, (float) 2.0, Color.PINK, (float) 600.0, 12);
+        this((float) 3.0, (float) 2.0, Color.PINK, (float) Math.random() * 1000, 12);
     }    
     
     //Methods

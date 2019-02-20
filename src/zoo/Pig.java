@@ -12,25 +12,42 @@ import java.awt.Color;
  * @author jword
  */
 public class Pig extends Animal implements Edible{
-    private final int calories = 300;    
+    private final int calories = 300;
+    private static int numPigs = 0;
     
     public Pig() {
         super();
         super.setIsEdible(true);
+        Pig.numPigs++;
+        System.out.println("There now "+Pig.numPigs+" pigs");
     }
     
     @Override
     public void speak() {
-        System.out.println("oink");
+        System.out.println("oink I have "+(Pig.numPigs - 1)+" brothers and sisters.");
     }
 
     @Override
     public void foodIsCalled() {
-        System.out.println("You ate pork."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("You ate pork.");
+        Pig.killPig();
     }
 
     @Override
     public int getCalories() {
-        return calories; //To change body of generated methods, choose Tools | Templates.
+        return calories;
     }
+
+    public static int getNumPigs() {
+        return numPigs;
+    }
+
+    public static void setNumPigs(int numPigs) {
+        Pig.numPigs = numPigs;
+    }
+
+    public static void killPig() {
+        Pig.numPigs--;
+    }
+    
 }

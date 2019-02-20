@@ -18,6 +18,7 @@ public class Zoo {
     private static Dog  spot;
     private static Zookeeper zack;
     private static ArrayList<Animal> animals;
+    private static ArrayList<Coconut> coconuts;
     private static final int animalTypes = 5;
     
     /**
@@ -32,6 +33,10 @@ public class Zoo {
         spot = new Dog();
         //spot.speak();
         zack = new Zookeeper();
+        coconuts = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            coconuts.add( new Coconut() );
+        }
         
         animals = new ArrayList<>();
         for (int i = 0; i < 30; i++) {
@@ -61,6 +66,10 @@ public class Zoo {
             a.speak();
             if (a.isIsEdible()) 
                 zack.eat( (Edible) a);
+        }
+        
+        for (Coconut coconut : coconuts) {
+            zack.eat(coconut);
         }
        
     }
